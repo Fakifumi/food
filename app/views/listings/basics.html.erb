@@ -1,0 +1,57 @@
+<%= render 'partial/navbar' %>
+<div class="container">
+    <div class="col-md-3">
+        <!-- vertical-navbar -->
+        <%= render 'partial/verticalnavbar'%>
+    </div>
+    <div class="col-md-9">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+              <div class="text-center">
+                  <span style="font-size:24px;">基本データの編集</span>
+              </div>
+          </div>
+
+          <div class="panel-body">           
+              <%= form_for @listing do |f| %>
+                  <div class="row">
+                      <div class="col-md-12 select">
+                          <div class="form-group">
+                              <label>得意料理</label>
+                              <%= f.select :special_dish, [["日本料理","日本料理"], ["中華料理","中華料理"], ["西洋料理","西洋料理"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+                          </div>
+                      </div>
+                  </div>
+                  <br>
+
+                  <div class="row">
+                      <div class="col-md-12 select">
+                          <div class="form-group">
+                              <label>保有資格</label>
+                              <%= f.select :qualification, [["管理栄養士","管理栄養士"], ["栄養士","栄養士"], ["なし","なし"], ["その他","その他"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+                          </div>
+                      </div>
+                  </div>
+                  <br>
+
+                  <div class="row">
+                      <div class="col-md-12 select">
+                          <div class="form-group">
+                              <label>調理歴</label>
+                              <%= f.select :cooking_history, [["1年",1], ["2年",2], ["3年",3], ["4年",4], ["5年",5], ["6年以上",6]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+                          </div>
+                      </div>
+                  </div>
+                  <br>
+
+                  
+                  <br>
+
+                  <div class="actions">
+                      <%= f.submit "更新", class: "btn btn-danger" %>
+                  </div>
+              <% end %>
+          </div>
+      </div>
+  </div>
+</div>
