@@ -23,6 +23,7 @@ gem 'jquery-ui-rails'
 gem 'stripe'
 gem 'rest-client'
 
+
 group :production do
     gem "pg"
     gem "rails_12factor"
