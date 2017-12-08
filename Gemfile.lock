@@ -144,7 +144,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
-    pg (0.21.0)
+    pg (0.20.0)
     rack (1.6.8)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -256,7 +256,7 @@ DEPENDENCIES
   omniauth
   omniauth-facebook
   paperclip (~> 5.0.0)
-  pg
+  pg (= 0.20.0)
   rails (= 4.2.6)
   rails_12factor
   rest-client
