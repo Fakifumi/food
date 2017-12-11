@@ -162,14 +162,17 @@
 
 
     <!-- レビュー    -->
-    <div class="row">
-        <div class="col-md-9">
-            <h3 class="row-space-3">レビュー</h3>
-        </div>
+    <div class="row row-space-4">
+      <div class="col-md-9">
+        <h3 class="row-space-3">レビュー<%= @reviews.count %>件</h3>
+<!--        <div id="average_star_rate"></div>-->
+          <%= render 'reviews/form' if @currentUserBooking && !@currentUserReview %>
+          <%= render 'reviews/list' %>
+      </div>
 
-        <div class="col-md-3">
-        
-        </div>
+      <div class="col-md-3">
+      
+      </div>
     </div>
 
     <!-- google map    -->
@@ -258,7 +261,7 @@ function initMap() {
 
 </script>
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1BoiSo2jL950_AuFzV-f9ETgKn0uQl2I&signed_in=true&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_wNpxCHuZd8PhGGbly7L-DGvEdK0L_b0&signed_in=true&callback=initMap">
 </script>
 
 <script>
@@ -416,4 +419,12 @@ $(function() {
     }
   });
 });
+</script>
+
+<script>
+  $('#average_star_rate').raty({
+      path: '/assets',
+      readOnly: true,
+      score: <%= @listing.average_star_rate %>
+  });
 </script>

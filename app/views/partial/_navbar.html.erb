@@ -10,6 +10,11 @@
       </button>
       <a class="navbar-brand" href="/">Brand</a>
     </div>
+    
+    
+    <div class="navbar-form navbar-left form-group row-space-2">
+        <%= text_field_tag :search, params[:search], placeholder: "どちらまで?", class:"form-control", id:"pac-input" %>
+    </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -22,6 +27,11 @@
         <li><%= link_to "ログイン", new_user_session_path %></li>
        <% else %>
         <!--ログインしている時-->
+        <li>
+            <%= link_to conversations_path do %>
+              <i class="fa fa-envelope"></i> メッセージ
+            <% end %>
+          </li>
         <li><%= link_to "シェフになる",new_listing_path %></li>
         <li class="dropdown">
             <a class=" dropdown-toggle" href="#"  data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
