@@ -77,7 +77,6 @@ class ListingsController < ApplicationController
     end
 
 
-
   private
   def listing_params
     params.require(:listing).permit(:special_dish, :qualification, :cooking_history, :price_pernight, :address, :listing_title, :listing_content, :active)
