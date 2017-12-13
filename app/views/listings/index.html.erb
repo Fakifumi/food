@@ -14,7 +14,7 @@
                         <div class="row-table">
                             <div class="col-md-3 col-sm-3 col-middle row-space-2">
                                 <div class="panel-list-img text-center">
-                                    <%= image_tag listing.photos[0].image.url(:medium) if listing.photos.length > 0  %>    
+                                    <%= image_tag listing.photos[0].image.url(:medium) if listing.photos.length >  0  %>    
                                 </div> 
                             </div>
 
@@ -23,7 +23,7 @@
                             </div>
                             
                             <div class="col-md-3 col-sm-3 col-middle row-space-1">
-                                <% if listing.not_checked > 0%>
+                                <% if listing.not_checked > 0 %>
                                     <%= link_to "残り#{listing.not_checked}ステップ", manage_listing_basics_path(listing), class: "btn btn-primary pull-right" %>
                                 <% else %>
                                     <%= link_to "編集する", manage_listing_basics_path(listing), class: "btn btn-success pull-right" %>
