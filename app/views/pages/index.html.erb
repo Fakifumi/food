@@ -11,7 +11,7 @@
   <div class="container">
    <div class="row">
      <div class="col-md-6 col-md-offset-3 text-center">
-       <h1 class="display-3">Hello, world!</h1>
+         <h2 class="display-3">料理をする、食べる。その瞬間を楽しむ</h2>
      </div>
    </div> 
   </div>
@@ -30,13 +30,13 @@
           </div>
 
           <div class="col-md-2 hidden-xs hidden-sm">
-            <%= text_field_tag :start_date, params[:start_date], placeholder: "チェックイン", class: "form-control" %>
+            <%= text_field_tag :start_date, params[:start_date], placeholder: "注文日（いつから）", class: "form-control" %>
           </div>
           <div class="col-md-2 hidden-xs hidden-sm">
-            <%= text_field_tag :end_date, params[:end_date], placeholder: "チェックアウト", class: "form-control" %>
+            <%= text_field_tag :end_date, params[:end_date], placeholder: "注文日（いつまで）", class: "form-control" %>
           </div>
           <div class="col-md-1 col-xs-2" style="padding-left: 0px; ">
-            <%= submit_tag "検索", class: "btn btn-danger" %>
+            <%= submit_tag "検索", class: "btn btn-success" %>
           </div>
         </div>
       </div>
@@ -51,24 +51,24 @@
       <div class="row row-space-4">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading">ご利用の流れ</h2>
-          <h3 class="section-subheading">Petshuggyはペットを預けるサービスです</h3>
+          <h3 class="section-subheading">FunMealは料理を作りたい人と食べたい人をマッチさせるサービスです</h3>
         </div>
       </div>
       <div class="row text-center">
         <div class="col-md-4">
           <%= image_tag 'search-icon'%>
           <h4 class="service-heading">探す</h4>
-          <p class="text-muted hidden-xs">まず、ペットを預けるペットシッターをこのサイトで検索しましょう。</p>
+          <p class="text-muted hidden-xs">まず、料理を作ってくれるシェフをこのサイトで検索しましょう。</p>
         </div>
         <div class="col-md-4">
           <%= image_tag 'calendar-icon'%>
           <h4 class="service-heading">予約する</h4>
-          <p class="text-muted hidden-xs">いいなと思うペットシッターがいたら、ペットを預けたい日にちを予約しましょう。</p>
+          <p class="text-muted hidden-xs">いいなと思うシェフがいたら、料理を注文したい日にちを予約しましょう。</p>
         </div>
         <div class="col-md-4">
           <%= image_tag 'home-icon'%>
-          <h4 class="service-heading">預ける</h4>
-          <p class="text-muted hidden-xs">予約した日の当日になったら、ペットを預けて、自分たちの時間を楽しみましょう！</p>
+          <h4 class="service-heading">受け渡し</h4>
+          <p class="text-muted hidden-xs">予約した日の当日になったら、受け渡しを行い、楽しく食べましょう！</p>
         </div>
       </div>
     </div>
@@ -79,8 +79,8 @@
     <div class="container">
       <div class="row row-space-2">
         <div class="col-lg-12 text-center">
-          <h3 class="section-heading">おすすめのシッター紹介</h3>
-          <h4 class="section-subheading">Petshuggy認定のペットシッターです</h4>
+          <h3 class="section-heading">おすすめのシェフ紹介</h3>
+          <h4 class="section-subheading">FunMeal認定のシェフです</h4>
         </div>
       </div>
 

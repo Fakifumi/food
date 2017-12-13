@@ -74,7 +74,7 @@
                 <div class="col-md-3">
                     <div class="panel panel-default panel-show">
                         <div class="panel-heading">
-                                <span style="font-size:16px;"><%= @listing.price_pernight %>円（一晩あたり）</span>
+                                <span style="font-size:16px;"><%= @listing.price_pernight %>円（一食あたり）</span>
                         </div>
                         
                         <div class="panel-body panel-real">         
@@ -97,7 +97,7 @@
                                     </div>
                                 </div>    
 
-                                <!-- シッター料金 -->
+                                <!-- シェフ料金 -->
                                 <div id="sitter-price" class="row row-space-2 hidden">
                                     <div class="col-md-8 col-xs-8">
                                         
@@ -135,7 +135,7 @@
                                 </div>        
 
                                 <div class="actions text-center">
-                                    <%= f.submit "この日程で予約する", class: "btn btn-danger btn-wide" %>
+                                    <%= f.submit "この日程で予約する", class: "btn btn-success btn-wide" %>
                                 </div>
                             <% end %>
                         </div>
@@ -151,7 +151,7 @@
     <div class="row">
         <div class="col-md-9">
             <h3 class="row-space-3">このリスティングについて</h3>
-                <p><%= @listing.listing_content %><%= @listing.listing_content %><%= @listing.listing_content %><%= @listing.listing_content %><%= @listing.listing_content %><%= @listing.listing_content %><%= @listing.listing_content %><%= @listing.listing_content %><%= @listing.listing_content %><%= @listing.listing_content %><%= @listing.listing_content %><%= @listing.listing_content %><%= @listing.listing_content %><%= @listing.listing_content %>
+                <p><%= @listing.listing_content %>
                 </p>
         </div>
 
@@ -197,7 +197,7 @@
     <!-- 近くのリスティング    -->
     <div class="row">
         <div class="col-md-9">
-            <h3 class="row-space-3">近くのリスティング</h3>
+            <h3 class="row-space-3">近くの掲載料理</h3>
             
             <% for listing in @listing.nearbys(10) %>
                 <div class="col-md-4">
@@ -343,7 +343,7 @@ $(function() {
                       $('#total-price').removeClass('hidden');
                       $('#applicaton-fee').removeClass('hidden');
                       $('#sitter-price .col-md-8').text("シッター料:"+"<%= @listing.price_pernight %>"+"円"+" x "+days+"日");
-                      $('#applicaton-fee .col-md-8').text("手数料:シッター料×13.6%");
+                      $('#applicaton-fee .col-md-8').text("手数料:シェフ料×13.6%");
                       $('#total-price .col-md-8').text("合計料金");
 
                       $('#sitter-price .col-md-4').text(sitter_price+"円");
@@ -402,8 +402,8 @@ $(function() {
                       $('#sitter-price').removeClass('hidden');
                       $('#total-price').removeClass('hidden');
                       $('#applicaton-fee').removeClass('hidden');
-                      $('#sitter-price .col-md-8').text("シッター料:"+"<%= @listing.price_pernight %>"+"円"+" x "+days+"日");
-                      $('#applicaton-fee .col-md-8').text("手数料:シッター料×13.6%");
+                      $('#sitter-price .col-md-8').text("シェフ料:"+"<%= @listing.price_pernight %>"+"円"+" x "+days+"日");
+                      $('#applicaton-fee .col-md-8').text("手数料:シェフ料×13.6%");
                       $('#total-price .col-md-8').text("合計料金");
 
                       $('#sitter-price .col-md-4').text(sitter_price+"円");

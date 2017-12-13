@@ -8,11 +8,11 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="text-center">
-                    <span style="font-size:24px;">リスティング写真の編集</span>
+                    <span style="font-size:24px;">掲載料理の写真を編集</span>
                 </div>
             </div>
 
-            <div class="panel-body">          
+            <div class="panel-body">
                 <%= form_for @photo, html:{multipart: true,class:"dropzone", id:"my-dropzone" } do |f| %> 
                     
                     <%= f.hidden_field :listing_id, value: @listing.id %>

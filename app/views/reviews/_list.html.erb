@@ -23,7 +23,7 @@
         
         <div>
           <span class="pull-right">
-            <%= link_to "DELETE",[@listing,review],method: :delete, data: {confirm: "削除しますか?"},class:"btn btn-danger" if current_user && current_user = review.user %>
+            <%= link_to "DELETE",[@listing,review],method: :delete, data: {confirm: "削除しますか?"},class:"btn btn-success" if current_user && current_user = review.user %>
             <!-- only current_user && reviewed user remove reviews -->
           </span>
         </div>
